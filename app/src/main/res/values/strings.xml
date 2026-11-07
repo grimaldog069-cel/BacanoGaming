@@ -89,4 +89,13 @@
     <string name="checkout_method_wallet">Billetera digital</string>
     <string name="checkout_summary_title">Resumen del pedido</string>
     <string name="checkout_pay">Pagar</string>
+    <string name="orders_title">Mis pedidos</string>
+    <string name="order_sample_id">#1028</string>
+    <string name="order_sample_date">17 nov 2026</string>
+    <string name="order_sample_items">Ítems: 2</string>
+    <string name="order_sample_total">Total: $1.899.900</string>
+    <string name="order_status_paid">Pagado</string>
+    <string name="order_status_shipped">Enviado</string>
+    <string name="order_status_delivered">Entregado</string>
+    <string name="order_warranty_button">Solicitar garantía o devolución</string>
 </resources>
