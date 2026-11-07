@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_card"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombreCatalogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/catalog_admin_sample_name"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEstadoCatalogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/catalog_admin_sample_status"
+            android:textColor="@color/status_paid"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivEditarCatalogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/desc_edit"
+        android:padding="12dp"
+        android:src="@drawable/ic_edit"
+        app:tint="@color/primary_blue" />
+
+    <ImageView
+        android:id="@+id/ivEliminarCatalogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/desc_delete"
+        android:padding="12dp"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/status_pending" />
+</LinearLayout>

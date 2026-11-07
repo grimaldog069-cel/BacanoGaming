@@ -215,4 +215,12 @@
     <string name="approvals_sample_docs">Documentos verificados: Sí</string>
     <string name="approvals_approve">Aprobar</string>
     <string name="approvals_reject">Rechazar</string>
+    <string name="catalog_admin_title">Categorías y marcas</string>
+    <string name="catalog_admin_tab_categories">Categorías</string>
+    <string name="catalog_admin_tab_brands">Marcas</string>
+    <string name="catalog_admin_sample_name">Periféricos</string>
+    <string name="catalog_admin_sample_status">Activo</string>
+    <string name="desc_edit">Editar</string>
+    <string name="desc_delete">Eliminar</string>
+    <string name="desc_add">Agregar</string>
 </resources>
