@@ -57,4 +57,15 @@
     <string name="filter_price">Precio</string>
     <string name="filter_specs">Especificaciones</string>
     <string name="product_sample_rating">★ 4.5</string>
+    <string name="detail_title">Detalle del producto</string>
+    <string name="detail_back">Volver</string>
+    <string name="detail_product_name">PlayStation 5 Standard</string>
+    <string name="detail_product_price">$3.199.000</string>
+    <string name="detail_stock">Stock: 15 disponibles</string>
+    <string name="detail_seller">Vendedor: Bacano Oficial</string>
+    <string name="detail_warranty">Garantía: 1 año</string>
+    <string name="detail_specs_title">Especificaciones</string>
+    <string name="detail_specs_sample">Almacenamiento: 825 GB SSD\nResolución: hasta 4K\nIncluye: control DualSense</string>
+    <string name="detail_add_cart">Agregar al carrito</string>
+    <string name="detail_wishlist">Lista de deseos</string>
 </resources>
