@@ -15,4 +15,15 @@
     <string name="forgot_subtitle">Escribe tu correo y te enviaremos un enlace para restablecerla</string>
     <string name="forgot_button">Enviar enlace</string>
     <string name="forgot_back">Volver a iniciar sesión</string>
+    <string name="register_title">Crea tu cuenta</string>
+    <string name="register_subtitle">Únete a la comunidad gamer</string>
+    <string name="register_name_hint">Nombre completo</string>
+    <string name="register_confirm_hint">Confirmar contraseña</string>
+    <string name="register_role_label">Quiero registrarme como</string>
+    <string name="register_role_buyer">Comprador</string>
+    <string name="register_role_seller">Vendedor</string>
+    <string name="register_terms">Acepto los términos y condiciones y el tratamiento de mis datos personales</string>
+    <string name="register_button">Crear cuenta</string>
+    <string name="register_has_account">¿Ya tienes cuenta?</string>
+    <string name="register_login_link">Inicia sesión</string>
 </resources>
