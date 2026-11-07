@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">BacanoGaming</string>
+    <string name="app_name">Bacano Gaming</string>
+    <string name="splash_title">Bacano Gaming</string>
+    <string name="splash_tagline">Tu tienda gamer en un solo lugar</string>
 </resources>
