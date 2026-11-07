@@ -200,4 +200,12 @@
     <string name="day_fri">Vie</string>
     <string name="day_sat">Sáb</string>
     <string name="day_sun">Dom</string>
+    <string name="admin_users_title">Gestión de usuarios</string>
+    <string name="admin_users_search">Buscar usuario</string>
+    <string name="admin_user_sample_name">Ana Gómez</string>
+    <string name="admin_user_sample_role">Vendedor · Activo</string>
+    <string name="admin_user_edit">Editar</string>
+    <string name="admin_user_suspend">Suspender</string>
+    <string name="admin_user_delete">Eliminar</string>
+    <string name="admin_user_new">Nuevo usuario</string>
 </resources>
