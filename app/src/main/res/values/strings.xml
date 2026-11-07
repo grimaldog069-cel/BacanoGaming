@@ -26,4 +26,16 @@
     <string name="register_button">Crear cuenta</string>
     <string name="register_has_account">¿Ya tienes cuenta?</string>
     <string name="register_login_link">Inicia sesión</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_cart">Carrito</string>
+    <string name="nav_orders">Pedidos</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_panel">Panel</string>
+    <string name="nav_users">Usuarios</string>
+    <string name="nav_approvals">Aprobaciones</string>
+    <string name="nav_pqrs">PQRS</string>
+    <string name="nav_settings">Ajustes</string>
+    <string name="nav_products">Productos</string>
+    <string name="nav_reports">Reportes</string>
 </resources>
