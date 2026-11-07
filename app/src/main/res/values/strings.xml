@@ -145,4 +145,10 @@
         <item>Consolas</item>
         <item>Videojuegos</item>
     </string-array>
+    <string name="seller_orders_title">Pedidos recibidos</string>
+    <string name="seller_order_buyer">Comprador: Ana Gómez</string>
+    <string name="seller_order_items">Ítems: Monitor Gamer 27", Teclado RGB</string>
+    <string name="seller_order_total">Total: $1.899.900</string>
+    <string name="order_status_pending">Pendiente</string>
+    <string name="seller_mark_shipped">Marcar como enviado</string>
 </resources>
