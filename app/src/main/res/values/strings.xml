@@ -117,4 +117,12 @@
     <string name="seller_low_stock">Stock bajo</string>
     <string name="seller_low_stock_value">3 productos</string>
     <string name="seller_weekly_sales">Ventas semanales</string>
+    <string name="seller_products_title">Mis productos</string>
+    <string name="seller_new_product">Nuevo producto</string>
+    <string name="seller_product_sample_name">Monitor Gamer 27"</string>
+    <string name="seller_product_sample_price">$1.250.000</string>
+    <string name="seller_product_sample_stock">Stock: 15 unidades</string>
+    <string name="seller_edit">Editar</string>
+    <string name="seller_delete">Eliminar</string>
+    <string name="desc_product_active">Producto activo</string>
 </resources>
