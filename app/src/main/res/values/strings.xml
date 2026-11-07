@@ -11,4 +11,8 @@
     <string name="login_biometric">Usar huella digital</string>
     <string name="login_register_prompt">¿No tienes cuenta?</string>
     <string name="login_register_link">Regístrate</string>
+    <string name="forgot_title">Recupera tu contraseña</string>
+    <string name="forgot_subtitle">Escribe tu correo y te enviaremos un enlace para restablecerla</string>
+    <string name="forgot_button">Enviar enlace</string>
+    <string name="forgot_back">Volver a iniciar sesión</string>
 </resources>
