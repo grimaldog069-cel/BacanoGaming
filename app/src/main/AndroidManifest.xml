@@ -23,6 +23,17 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity
+            android:name=".comprador.CompradorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".vendedor.VendedorActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
