@@ -223,4 +223,11 @@
     <string name="desc_edit">Editar</string>
     <string name="desc_delete">Eliminar</string>
     <string name="desc_add">Agregar</string>
+    <string name="moderation_title">Moderación y PQRS</string>
+    <string name="moderation_tab_reviews">Reseñas</string>
+    <string name="moderation_tab_pqrs">PQRS</string>
+    <string name="moderation_sample_title">Reseña reportada: Mal servicio</string>
+    <string name="moderation_sample_user">Usuario: María F.</string>
+    <string name="moderation_sample_status">Estado: Recibida</string>
+    <string name="moderation_respond">Responder</string>
 </resources>
