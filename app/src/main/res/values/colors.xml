@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="bg_black">#0B0D17</color>
+    <color name="surface_dark">#161A2B</color>
+    <color name="surface_border">#2A3060</color>
+    <color name="primary_blue">#3B6CFF</color>
+    <color name="primary_blue_dark">#1F3FA8</color>
+    <color name="accent_purple">#7B4DFF</color>
+    <color name="accent_purple_dark">#5230C4</color>
+    <color name="text_primary">#F2F2F7</color>
+    <color name="text_secondary">#A0A3B8</color>
+    <color name="status_paid">#2ED47A</color>
+    <color name="status_shipped">#3B9CFF</color>
+    <color name="status_pending">#FF4D6D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
