@@ -176,4 +176,11 @@
         <item>Categoría</item>
         <item>Toda la tienda</item>
     </string-array>
+    <string name="seller_profile_title">Perfil del vendedor</string>
+    <string name="seller_profile_store">Nombre de la tienda</string>
+    <string name="seller_profile_verified">Vendedor verificado</string>
+    <string name="seller_profile_opt_store">Datos de la tienda</string>
+    <string name="seller_profile_opt_docs">Documentos</string>
+    <string name="seller_profile_opt_payouts">Cuenta para recibir pagos</string>
+    <string name="seller_profile_opt_reviews">Reseñas de mis productos</string>
 </resources>
