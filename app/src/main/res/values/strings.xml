@@ -38,4 +38,17 @@
     <string name="nav_settings">Ajustes</string>
     <string name="nav_products">Productos</string>
     <string name="nav_reports">Reportes</string>
+    <string name="home_search_hint">Buscar productos</string>
+    <string name="home_banner_title">¡Ofertas semanales!</string>
+    <string name="home_banner_discount">Hasta 40% OFF</string>
+    <string name="home_categories">Categorías</string>
+    <string name="home_featured">Destacados</string>
+    <string name="cat_peripherals">Periféricos</string>
+    <string name="cat_components">Componentes</string>
+    <string name="cat_consoles">Consolas</string>
+    <string name="cat_games">Videojuegos</string>
+    <string name="product_sample_name">Monitor Gamer ASUS ROG</string>
+    <string name="product_sample_price">$3.500.000</string>
+    <string name="desc_product_image">Imagen del producto</string>
+    <string name="desc_profile_icon">Perfil</string>
 </resources>
