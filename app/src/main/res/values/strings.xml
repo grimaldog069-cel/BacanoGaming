@@ -68,4 +68,16 @@
     <string name="detail_specs_sample">Almacenamiento: 825 GB SSD\nResolución: hasta 4K\nIncluye: control DualSense</string>
     <string name="detail_add_cart">Agregar al carrito</string>
     <string name="detail_wishlist">Lista de deseos</string>
+    <string name="cart_title">Tu carrito</string>
+    <string name="cart_subtotal">Subtotal</string>
+    <string name="cart_shipping">Envío</string>
+    <string name="cart_total">Total</string>
+    <string name="cart_subtotal_value">$3.199.000</string>
+    <string name="cart_shipping_value">$25.000</string>
+    <string name="cart_total_value">$3.224.000</string>
+    <string name="cart_checkout">Continuar al pago</string>
+    <string name="cart_qty_minus">−</string>
+    <string name="cart_qty_plus">+</string>
+    <string name="cart_qty_value">1</string>
+    <string name="cart_remove">Quitar</string>
 </resources>
