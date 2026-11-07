@@ -230,4 +230,21 @@
     <string name="moderation_sample_user">Usuario: María F.</string>
     <string name="moderation_sample_status">Estado: Recibida</string>
     <string name="moderation_respond">Responder</string>
+    <string name="admin_report_title">Reporte de ventas</string>
+    <string name="admin_report_today">Hoy</string>
+    <string name="admin_report_week">Semana</string>
+    <string name="admin_report_month">Mes</string>
+    <string name="admin_report_total_label">Ventas del periodo</string>
+    <string name="admin_report_total_value">$38.450.000</string>
+    <string name="admin_report_orders_label">Pedidos completados</string>
+    <string name="admin_report_orders_value">214</string>
+    <string name="admin_report_chart_title">Ventas por día</string>
+    <string name="admin_report_top_title">Productos más vendidos</string>
+    <string name="admin_report_top_1">1. PlayStation 5 Standard</string>
+    <string name="admin_report_top_2">2. Monitor Gamer 27</string>
+    <string name="admin_report_top_3">3. Teclado RGB</string>
+    <string name="admin_report_top_units_1">48 unidades</string>
+    <string name="admin_report_top_units_2">35 unidades</string>
+    <string name="admin_report_top_units_3">29 unidades</string>
+    <string name="admin_report_export">Exportar reporte</string>
 </resources>
