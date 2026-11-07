@@ -109,4 +109,12 @@
     <string name="profile_option_help">Ayuda y PQRS</string>
     <string name="profile_logout">Cerrar sesión</string>
     <string name="desc_avatar">Foto de perfil</string>
+    <string name="seller_greeting">Hola, Vendedor</string>
+    <string name="seller_sales_month">Ventas del mes</string>
+    <string name="seller_sales_month_value">$15.890.000</string>
+    <string name="seller_new_orders">Pedidos nuevos</string>
+    <string name="seller_new_orders_value">12</string>
+    <string name="seller_low_stock">Stock bajo</string>
+    <string name="seller_low_stock_value">3 productos</string>
+    <string name="seller_weekly_sales">Ventas semanales</string>
 </resources>
