@@ -183,4 +183,21 @@
     <string name="seller_profile_opt_docs">Documentos</string>
     <string name="seller_profile_opt_payouts">Cuenta para recibir pagos</string>
     <string name="seller_profile_opt_reviews">Reseñas de mis productos</string>
+    <string name="admin_title">Bacano Gaming | Administrador</string>
+    <string name="admin_total_sales">Total de ventas</string>
+    <string name="admin_total_sales_value">$150.890.500</string>
+    <string name="admin_users">Usuarios registrados</string>
+    <string name="admin_users_value">3.450</string>
+    <string name="admin_sellers">Vendedores activos</string>
+    <string name="admin_sellers_value">125</string>
+    <string name="admin_orders_today">Pedidos del día</string>
+    <string name="admin_orders_today_value">89</string>
+    <string name="admin_weekly_sales">Ventas semanales</string>
+    <string name="day_mon">Lun</string>
+    <string name="day_tue">Mar</string>
+    <string name="day_wed">Mié</string>
+    <string name="day_thu">Jue</string>
+    <string name="day_fri">Vie</string>
+    <string name="day_sat">Sáb</string>
+    <string name="day_sun">Dom</string>
 </resources>
