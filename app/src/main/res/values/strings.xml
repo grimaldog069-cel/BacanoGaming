@@ -80,4 +80,13 @@
     <string name="cart_qty_plus">+</string>
     <string name="cart_qty_value">1</string>
     <string name="cart_remove">Quitar</string>
+    <string name="checkout_title">Finalizar compra</string>
+    <string name="checkout_address_title">Dirección de envío</string>
+    <string name="checkout_address_hint">Calle, número y ciudad</string>
+    <string name="checkout_method_title">Método de pago</string>
+    <string name="checkout_method_card">Tarjeta crédito o débito</string>
+    <string name="checkout_method_pse">PSE</string>
+    <string name="checkout_method_wallet">Billetera digital</string>
+    <string name="checkout_summary_title">Resumen del pedido</string>
+    <string name="checkout_pay">Pagar</string>
 </resources>
