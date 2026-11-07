@@ -125,4 +125,24 @@
     <string name="seller_edit">Editar</string>
     <string name="seller_delete">Eliminar</string>
     <string name="desc_product_active">Producto activo</string>
+    <string name="newproduct_title">Nuevo producto</string>
+    <string name="newproduct_name">Nombre</string>
+    <string name="newproduct_description">Descripción</string>
+    <string name="newproduct_category">Categoría</string>
+    <string name="newproduct_price">Precio</string>
+    <string name="newproduct_stock">Stock</string>
+    <string name="newproduct_variants">Variantes</string>
+    <string name="newproduct_color">Color</string>
+    <string name="newproduct_model">Modelo</string>
+    <string name="newproduct_specs">Especificaciones</string>
+    <string name="newproduct_upload">Agregar fotos</string>
+    <string name="newproduct_publish">Publicar</string>
+    <string name="desc_upload_photo">Subir foto</string>
+
+    <string-array name="product_categories">
+        <item>Periféricos</item>
+        <item>Componentes</item>
+        <item>Consolas</item>
+        <item>Videojuegos</item>
+    </string-array>
 </resources>
