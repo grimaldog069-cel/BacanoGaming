@@ -208,4 +208,11 @@
     <string name="admin_user_suspend">Suspender</string>
     <string name="admin_user_delete">Eliminar</string>
     <string name="admin_user_new">Nuevo usuario</string>
+    <string name="approvals_title">Aprobaciones pendientes</string>
+    <string name="approvals_tab_sellers">Vendedores</string>
+    <string name="approvals_tab_products">Productos</string>
+    <string name="approvals_sample_name">Tienda Gamer SAS (Vendedor)</string>
+    <string name="approvals_sample_docs">Documentos verificados: Sí</string>
+    <string name="approvals_approve">Aprobar</string>
+    <string name="approvals_reject">Rechazar</string>
 </resources>
