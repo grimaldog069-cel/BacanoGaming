@@ -2,4 +2,13 @@
     <string name="app_name">Bacano Gaming</string>
     <string name="splash_title">Bacano Gaming</string>
     <string name="splash_tagline">Tu tienda gamer en un solo lugar</string>
+    <string name="login_title">Bienvenido de nuevo</string>
+    <string name="login_subtitle">Inicia sesión para continuar</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="login_forgot">¿Olvidaste tu contraseña?</string>
+    <string name="login_biometric">Usar huella digital</string>
+    <string name="login_register_prompt">¿No tienes cuenta?</string>
+    <string name="login_register_link">Regístrate</string>
 </resources>
