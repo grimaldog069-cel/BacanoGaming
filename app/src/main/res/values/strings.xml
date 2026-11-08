@@ -119,7 +119,7 @@
     <string name="seller_weekly_sales">Ventas semanales</string>
     <string name="seller_products_title">Mis productos</string>
     <string name="seller_new_product">Nuevo producto</string>
-    <string name="seller_product_sample_name">Monitor Gamer 27"</string>
+    <string name="seller_product_sample_name">Monitor Gamer 27</string>
     <string name="seller_product_sample_price">$1.250.000</string>
     <string name="seller_product_sample_stock">Stock: 15 unidades</string>
     <string name="seller_edit">Editar</string>
@@ -147,7 +147,7 @@
     </string-array>
     <string name="seller_orders_title">Pedidos recibidos</string>
     <string name="seller_order_buyer">Comprador: Ana Gómez</string>
-    <string name="seller_order_items">Ítems: Monitor Gamer 27", Teclado RGB</string>
+    <string name="seller_order_items">Ítems: Monitor Gamer 27, Teclado RGB</string>
     <string name="seller_order_total">Total: $1.899.900</string>
     <string name="order_status_pending">Pendiente</string>
     <string name="seller_mark_shipped">Marcar como enviado</string>
@@ -247,4 +247,14 @@
     <string name="admin_report_top_units_2">35 unidades</string>
     <string name="admin_report_top_units_3">29 unidades</string>
     <string name="admin_report_export">Exportar reporte</string>
+    <string name="error_empty_fields">Completa todos los campos</string>
+    <string name="error_password_mismatch">Las contraseñas no coinciden</string>
+    <string name="error_terms">Debes aceptar los términos y condiciones</string>
+    <string name="msg_account_created">Cuenta creada. Inicia sesión</string>
+    <string name="msg_reset_link_sent">Te enviamos un enlace a tu correo</string>
+    <string name="biometric_title">Inicio de sesión biométrico</string>
+    <string name="biometric_subtitle">Usa tu huella o rostro para continuar</string>
+    <string name="biometric_cancel">Cancelar</string>
+    <string name="biometric_unavailable">Biometría no disponible en este dispositivo</string>
+    <string name="biometric_first_login">Inicia sesión una vez con tu correo para activar la huella</string>
 </resources>

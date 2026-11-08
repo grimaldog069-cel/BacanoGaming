@@ -7,10 +7,11 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Bacano Gaming"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BacanoGaming">
+
         <activity
             android:name=".common.SplashActivity"
             android:exported="true">
@@ -21,8 +22,17 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".common.LoginActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".common.RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".common.ForgotPasswordActivity"
+            android:exported="false" />
+
         <activity
             android:name=".comprador.CompradorActivity"
             android:exported="false" />
@@ -34,6 +44,11 @@
         <activity
             android:name=".admin.AdminActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
