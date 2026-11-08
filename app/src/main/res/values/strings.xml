@@ -257,4 +257,8 @@
     <string name="biometric_cancel">Cancelar</string>
     <string name="biometric_unavailable">Biometría no disponible en este dispositivo</string>
     <string name="biometric_first_login">Inicia sesión una vez con tu correo para activar la huella</string>
+    <string name="admin_view_report">Ver reporte de ventas</string>
+    <string name="msg_payment_done">Pago simulado con éxito</string>
+    <string name="msg_product_published">Producto publicado</string>
+
 </resources>

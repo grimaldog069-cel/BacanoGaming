@@ -285,5 +285,28 @@
                     android:textSize="11sp" />
             </LinearLayout>
         </LinearLayout>
+        <Button
+            android:id="@+id/btnVerReporte"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_gradient"
+            android:text="@string/admin_view_report"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnCerrarSesionAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_button_logout"
+            android:text="@string/profile_logout"
+            android:textAllCaps="false"
+            android:textColor="@color/status_pending"
+            android:textSize="16sp"
+            app:backgroundTint="@null" />
     </LinearLayout>
 </ScrollView>

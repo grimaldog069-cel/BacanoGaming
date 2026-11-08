@@ -46,8 +46,19 @@ abstract class BaseNavActivity : AppCompatActivity() {
     }
 
     fun mostrar(fragment: Fragment) {
+        supportFragmentManager.popBackStack(
+            null,
+            androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE
+        )
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
+            .commit()
+    }
+
+    fun abrirPantalla(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .addToBackStack(null)
             .commit()
     }
 }
