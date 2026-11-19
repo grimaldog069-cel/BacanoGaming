@@ -316,4 +316,9 @@
     <string name="order_total_format">Total: %1$s</string>
     <string name="order_buyer_format">Comprador: %1$s</string>
     <string name="checkout_use_location">Usar mi ubicación</string>
+    <string name="location_getting">Obteniendo ubicación…</string>
+    <string name="location_captured">Ubicación capturada: %1$s</string>
+    <string name="location_denied">Permiso de ubicación denegado</string>
+    <string name="location_error">No se pudo obtener la ubicación. Activa el GPS e inténtalo de nuevo</string>
+    <string name="location_address_fallback">Ubicación: %1$s</string>
 </resources>

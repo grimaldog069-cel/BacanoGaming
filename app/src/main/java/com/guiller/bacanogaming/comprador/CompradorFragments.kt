@@ -1,21 +1,31 @@
 package com.guiller.bacanogaming.comprador
 
+import android.annotation.SuppressLint
+import android.location.Address
+import android.location.Geocoder
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.location.Priority
+import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.guiller.bacanogaming.R
 import com.guiller.bacanogaming.common.*
+import java.util.Locale
 
 /** Muestra un mensaje corto desde cualquier fragment. */
 private fun Fragment.avisar(texto: String) {
@@ -182,12 +192,25 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
 }
 
 /**
- * Pago: pide la dirección y el método de pago, muestra el resumen y al pulsar
- * "Pagar" registra la orden en Firestore.
+ * Pago: pide la dirección (que se puede llenar con la ubicación del celular)
+ * y el método de pago, muestra el resumen y al pulsar "Pagar" registra la orden
+ * en Firestore junto con las coordenadas si se capturaron.
  */
 class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
 
-    /** Muestra el resumen del carrito y configura el botón de pagar. */
+    private var latitud: Double? = null
+    private var longitud: Double? = null
+    private lateinit var etDireccion: EditText
+    private lateinit var tvUbicacion: TextView
+    private lateinit var botonUbicacion: Button
+
+    /** Solicita el permiso de ubicación y, si el usuario lo concede, obtiene la ubicación. */
+    private val pedirPermiso =
+        registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { resultado ->
+            if (resultado.values.any { it }) obtenerUbicacion() else avisar(getString(R.string.location_denied))
+        }
+
+    /** Muestra el resumen del carrito y configura los botones de ubicación y pago. */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<View>(R.id.ivVolverPago).setOnClickListener {
@@ -198,9 +221,14 @@ class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
         view.findViewById<TextView>(R.id.tvEnvioPago).text = formatoPrecio(Carrito.envio())
         view.findViewById<TextView>(R.id.tvTotalPago).text = formatoPrecio(Carrito.total())
 
-        val etDireccion = view.findViewById<EditText>(R.id.etDireccion)
+        etDireccion = view.findViewById(R.id.etDireccion)
+        tvUbicacion = view.findViewById(R.id.tvUbicacion)
+        botonUbicacion = view.findViewById(R.id.btnUbicacion)
         val grupoPago = view.findViewById<RadioGroup>(R.id.rgMetodoPago)
         val botonPagar = view.findViewById<View>(R.id.btnPagar)
+
+        botonUbicacion.visibility = View.VISIBLE
+        botonUbicacion.setOnClickListener { pedirUbicacion() }
 
         botonPagar.setOnClickListener {
             val direccion = etDireccion.text.toString().trim()
@@ -215,8 +243,10 @@ class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
                 else -> {
                     botonPagar.isEnabled = false
                     OrdenRepository.crear(
-                        direccion,
-                        metodo,
+                        direccion = direccion,
+                        metodoPago = metodo,
+                        latitud = latitud,
+                        longitud = longitud,
                         alExito = {
                             if (isAdded) {
                                 avisar(getString(R.string.msg_order_created))
@@ -235,6 +265,90 @@ class CheckoutFragment : Fragment(R.layout.fragment_checkout) {
                 }
             }
         }
+    }
+
+    /** Pide el permiso de ubicación (la ventana del sistema solo sale si aún no se concedió). */
+    private fun pedirUbicacion() {
+        pedirPermiso.launch(
+            arrayOf(
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+            )
+        )
+    }
+
+    /**
+     * Obtiene la ubicación actual con el proveedor combinado de Google Play services.
+     * Si la consigue, guarda las coordenadas y las convierte en una dirección legible.
+     */
+    @SuppressLint("MissingPermission")
+    private fun obtenerUbicacion() {
+        botonUbicacion.isEnabled = false
+        tvUbicacion.visibility = View.VISIBLE
+        tvUbicacion.text = getString(R.string.location_getting)
+
+        val cliente = LocationServices.getFusedLocationProviderClient(requireActivity())
+        cliente.getCurrentLocation(Priority.PRIORITY_HIGH_ACCURACY, CancellationTokenSource().token)
+            .addOnSuccessListener { ubicacion ->
+                if (!isAdded) return@addOnSuccessListener
+                botonUbicacion.isEnabled = true
+                if (ubicacion == null) {
+                    tvUbicacion.text = getString(R.string.location_error)
+                } else {
+                    latitud = ubicacion.latitude
+                    longitud = ubicacion.longitude
+                    convertirEnDireccion(ubicacion.latitude, ubicacion.longitude)
+                }
+            }
+            .addOnFailureListener {
+                if (isAdded) {
+                    botonUbicacion.isEnabled = true
+                    tvUbicacion.text = getString(R.string.location_error)
+                }
+            }
+    }
+
+    /**
+     * Convierte las coordenadas en una dirección con Geocoder y la escribe en el
+     * campo de dirección. Si no se puede, escribe las coordenadas como respaldo.
+     */
+    @Suppress("DEPRECATION")
+    private fun convertirEnDireccion(lat: Double, lng: Double) {
+        val coordenadas = String.format(Locale.US, "%.5f, %.5f", lat, lng)
+        tvUbicacion.text = getString(R.string.location_captured, coordenadas)
+        val respaldo = getString(R.string.location_address_fallback, coordenadas)
+
+        if (!Geocoder.isPresent()) {
+            etDireccion.setText(respaldo)
+            return
+        }
+        val geocoder = Geocoder(requireContext(), Locale.forLanguageTag("es-CO"))
+        if (Build.VERSION.SDK_INT >= 33) {
+            geocoder.getFromLocation(lat, lng, 1, object : Geocoder.GeocodeListener {
+                override fun onGeocode(addresses: MutableList<Address>) {
+                    activity?.runOnUiThread { ponerDireccion(addresses.firstOrNull(), respaldo) }
+                }
+
+                override fun onError(errorMessage: String?) {
+                    activity?.runOnUiThread { ponerDireccion(null, respaldo) }
+                }
+            })
+        } else {
+            Thread {
+                val lista = try {
+                    geocoder.getFromLocation(lat, lng, 1)
+                } catch (e: Exception) {
+                    null
+                }
+                activity?.runOnUiThread { ponerDireccion(lista?.firstOrNull(), respaldo) }
+            }.start()
+        }
+    }
+
+    /** Escribe la dirección encontrada en el campo de texto, o el respaldo si no hay. */
+    private fun ponerDireccion(direccion: Address?, respaldo: String) {
+        if (!isAdded) return
+        etDireccion.setText(direccion?.getAddressLine(0) ?: respaldo)
     }
 }
 

@@ -4,6 +4,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.GeoPoint
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -79,11 +80,19 @@ object OrdenRepository {
 
     /**
      * Guarda una orden con el contenido del carrito y descuenta el stock de cada
-     * producto en una sola operación (todo se guarda o nada). Al terminar bien
-     * vacía el carrito y llama a [alExito]; si falla, llama a [alFallar].
+     * producto en una sola operación (todo se guarda o nada). Si hay coordenadas,
+     * se guardan como un GeoPoint junto a la dirección de entrega.
+     * Al terminar bien vacía el carrito y llama a [alExito]; si falla, llama a [alFallar].
      * Por ahora el pago se registra como "pagado"; la pasarela real reemplazará este paso.
      */
-    fun crear(direccion: String, metodoPago: String, alExito: () -> Unit, alFallar: () -> Unit) {
+    fun crear(
+        direccion: String,
+        metodoPago: String,
+        latitud: Double?,
+        longitud: Double?,
+        alExito: () -> Unit,
+        alFallar: () -> Unit
+    ) {
         val usuario = FirebaseAuth.getInstance().currentUser
         val items = Carrito.lista()
         if (usuario == null || items.isEmpty()) {
@@ -118,6 +127,9 @@ object OrdenRepository {
                     "metodoPago" to metodoPago,
                     "fecha" to FieldValue.serverTimestamp()
                 )
+                if (latitud != null && longitud != null) {
+                    orden["ubicacion"] = GeoPoint(latitud, longitud)
+                }
 
                 val lote = db.batch()
                 lote.set(db.collection("orders").document(), orden)
