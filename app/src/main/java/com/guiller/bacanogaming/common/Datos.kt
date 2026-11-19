@@ -4,6 +4,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.guiller.bacanogaming.R
 
+/** Códigos de los estados de un pedido, usados para elegir la etiqueta de color. */
 object Estado {
     const val PAGADO = 0
     const val ENVIADO = 1
@@ -11,8 +12,10 @@ object Estado {
     const val PENDIENTE = 3
 }
 
+/** Producto sencillo con nombre y precio en texto. */
 data class Producto(val nombre: String, val precio: String)
 
+/** Pedido sencillo con sus datos en texto. */
 data class Pedido(
     val id: String,
     val fecha: String,
@@ -21,8 +24,13 @@ data class Pedido(
     val estado: Int
 )
 
+/** Fila genérica con título, detalle y un texto extra opcional. */
 data class Fila(val titulo: String, val detalle: String, val extra: String = "")
 
+/**
+ * Pinta la etiqueta de estado de un pedido: cambia su texto, su fondo y su color
+ * según el [estado] recibido (pagado, enviado, entregado o pendiente).
+ */
 fun aplicarEstado(tv: TextView, estado: Int) {
     val (texto, fondo, color) = when (estado) {
         Estado.PAGADO -> Triple(R.string.order_status_paid, R.drawable.bg_badge_paid, R.color.status_paid)
