@@ -11,28 +11,10 @@ import com.guiller.bacanogaming.common.Fila
 import com.guiller.bacanogaming.common.ListaAdapter
 import com.guiller.bacanogaming.common.Sesion
 
+/** Pantalla del reporte de ventas (diseño). */
 class AdminReportFragment : Fragment(R.layout.fragment_admin_report)
 
-class AdminUsersFragment : Fragment(R.layout.fragment_admin_users) {
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val usuarios = listOf(
-            Fila("Ana Gómez", "Vendedor · Activo"),
-            Fila("Carlos Ruiz", "Comprador · Activo"),
-            Fila("Luisa Díaz", "Vendedor · Pendiente"),
-            Fila("Pedro Martínez", "Comprador · Activo")
-        )
-        view.findViewById<RecyclerView>(R.id.rvUsuarios).adapter = ListaAdapter(
-            usuarios,
-            R.layout.item_admin_user,
-            bind = { v, f ->
-                v.findViewById<TextView>(R.id.tvNombreUsuarioAdmin).text = f.titulo
-                v.findViewById<TextView>(R.id.tvRolEstado).text = f.detalle
-            }
-        )
-    }
-}
-
+/** Pantalla de aprobaciones pendientes con datos de ejemplo. */
 class AdminApprovalsFragment : Fragment(R.layout.fragment_admin_approvals) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,6 +34,7 @@ class AdminApprovalsFragment : Fragment(R.layout.fragment_admin_approvals) {
     }
 }
 
+/** Pantalla de moderación y PQRS con datos de ejemplo. */
 class AdminModerationFragment : Fragment(R.layout.fragment_admin_moderation) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -72,6 +55,7 @@ class AdminModerationFragment : Fragment(R.layout.fragment_admin_moderation) {
     }
 }
 
+/** Pantalla de categorías y marcas con datos de ejemplo. */
 class AdminCatalogFragment : Fragment(R.layout.fragment_admin_catalog) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -92,6 +76,7 @@ class AdminCatalogFragment : Fragment(R.layout.fragment_admin_catalog) {
     }
 }
 
+/** Panel general del administrador: acceso al reporte de ventas y cierre de sesión. */
 class AdminDashboardFragment : Fragment(R.layout.fragment_admin_dashboard) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -37,6 +37,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tvCompradorPedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -45,6 +46,7 @@
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/tvItemsPedidoVendedor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -53,6 +55,7 @@
         android:textSize="14sp" />
 
     <TextView
+        android:id="@+id/tvTotalPedidoVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"

@@ -27,6 +27,7 @@
                 app:tint="@color/text_primary" />
 
             <TextView
+                android:id="@+id/tvTituloProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/newproduct_title"
@@ -198,35 +199,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/newproduct_specs"
+            android:text="@string/product_photo_title"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <FrameLayout
             android:id="@+id/zonaSubirFoto"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="180dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/bg_upload"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:background="@drawable/bg_upload">
+
+            <LinearLayout
+                android:id="@+id/llFotoVacia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="@string/desc_upload_photo"
+                    android:src="@drawable/ic_add"
+                    app:tint="@color/primary_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/newproduct_upload"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:contentDescription="@string/desc_upload_photo"
-                android:src="@drawable/ic_add"
-                app:tint="@color/primary_blue" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/newproduct_upload"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
-        </LinearLayout>
+                android:id="@+id/ivFotoProducto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/desc_product_image"
+                android:padding="4dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </FrameLayout>
 
         <Button
             android:id="@+id/btnPublicar"

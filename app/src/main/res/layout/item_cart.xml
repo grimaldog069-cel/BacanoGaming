@@ -10,6 +10,7 @@
     android:padding="12dp">
 
     <ImageView
+        android:id="@+id/ivProductoCarrito"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/bg_product_image"
@@ -26,6 +27,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tvNombreCarrito"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="2"
@@ -34,6 +36,7 @@
             android:textSize="15sp" />
 
         <TextView
+            android:id="@+id/tvPrecioCarrito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"

@@ -9,6 +9,7 @@
     android:padding="8dp">
 
     <ImageView
+        android:id="@+id/ivProductoCatalogo"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:background="@drawable/bg_product_image"
@@ -26,14 +27,6 @@
         android:text="@string/product_sample_name"
         android:textColor="@color/text_primary"
         android:textSize="14sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/product_sample_rating"
-        android:textColor="@color/status_pending"
-        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tvPrecioProducto"

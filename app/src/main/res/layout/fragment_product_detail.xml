@@ -36,6 +36,7 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/ivProductoDetalle"
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:layout_marginTop="12dp"
@@ -46,6 +47,7 @@
             app:tint="@color/primary_blue_dark" />
 
         <TextView
+            android:id="@+id/tvNombreDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -55,6 +57,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvPrecioDetalle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -72,6 +75,7 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/tvStockDetalle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/detail_stock"
@@ -79,18 +83,11 @@
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tvVendedorDetalle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:text="@string/detail_seller"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:text="@string/detail_warranty"
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -105,11 +102,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvEspecificaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:lineSpacingExtra="4dp"
-            android:text="@string/detail_specs_sample"
             android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 
@@ -118,23 +115,11 @@
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/bg_button_gradient"
             android:text="@string/detail_add_cart"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            app:backgroundTint="@null" />
-
-        <Button
-            android:id="@+id/btnListaDeseos"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/bg_button_outline"
-            android:text="@string/detail_wishlist"
-            android:textAllCaps="false"
-            android:textColor="@color/primary_blue"
             android:textSize="16sp"
             app:backgroundTint="@null" />
     </LinearLayout>

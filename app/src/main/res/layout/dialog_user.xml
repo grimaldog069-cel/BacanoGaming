@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/dlgNombre"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_input"
+        android:hint="@string/users_dialog_name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName|textCapWords"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/dlgCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:hint="@string/users_dialog_email_hint"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary" />
+
+    <EditText
+        android:id="@+id/dlgClave"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:hint="@string/users_dialog_password_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/users_dialog_role_label"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <RadioGroup
+        android:id="@+id/dlgRol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbDlgComprador"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_purple"
+            android:minHeight="48dp"
+            android:text="@string/register_role_buyer"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rbDlgVendedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_purple"
+            android:minHeight="48dp"
+            android:text="@string/register_role_seller"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/rbDlgAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/accent_purple"
+            android:minHeight="48dp"
+            android:text="@string/users_role_admin"
+            android:textColor="@color/text_primary" />
+    </RadioGroup>
+</LinearLayout>
